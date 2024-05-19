@@ -1,4 +1,5 @@
 
+import { Outlet } from 'react-router-dom'
 import './App.css'
 
 function App() {
@@ -6,8 +7,10 @@ function App() {
 
   return (
     <>
-    
-      <h1 className='text-4xl font-bold text-centers items-center justify-center flex'>Vite + React app</h1>
+      <div>
+        Navbar
+      </div>
+      <Outlet></Outlet>
      
     </>
   )
