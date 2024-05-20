@@ -140,7 +140,7 @@ const Footer = () => {
       <hr className="my-5" />
       <div className="flex justify-between container mx-auto ">
         <div className="">
-          <small>Copy right reserved</small>
+          <small>Copyright &copy; 2023 All rights reserved by Eyeglass</small>
         </div>
         <div className="flex gap-2  justify-end">
           <a href="/guides" className="hover:underline">

@@ -8,6 +8,7 @@ const NavBar = () => {
     const toggleMenu = () =>{
         setMenuOpen(!isMenuOpen);
     }
+   
     const navItems = [
       { path: "/", link: "Home" },
       { path: "/aboutus", link: "About Us" },
@@ -39,8 +40,9 @@ const NavBar = () => {
 
         {/* menu item */}
         <div className="lg:flex gap-5 items-center hidden">
-          <a href="/">
+          <a href="/shopingcart">
             <img src="/src/assets/logo/Vector (1).png" alt="" />
+           
           </a>
           <a href="/">
             <img src="/src/assets/logo/Profile icon.png" alt="" />
@@ -62,13 +64,20 @@ const NavBar = () => {
       {/* menu item only for mobile */}
       <div>
         <ul
-          className={`text-[#383838] text-xl  gap-7 md:hidden block space-y-4 px-4 py-6  mt-24 bg-white ${isMenuOpen ? "fixed top-0 left-0 w-0 transition-all bg-white ease-out duration-150":"hidden"}`}
+          className={`text-[#383838] text-xl  gap-7 md:hidden block space-y-4 px-4 py-6  mt-24 bg-white ${
+            isMenuOpen
+              ? "fixed top-0 left-0 w-0 transition-all bg-white ease-out duration-150"
+              : "hidden"
+          }`}
         >
           {navItems.map(({ path, link }) => (
             <>
               <li key={path}>
                 {" "}
-                <NavLink onClick={toggleMenu} to={path}> {link} </NavLink>{" "}
+                <NavLink onClick={toggleMenu} to={path}>
+                  {" "}
+                  {link}{" "}
+                </NavLink>{" "}
               </li>
             </>
           ))}

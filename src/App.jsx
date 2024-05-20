@@ -1,8 +1,9 @@
 
 import { Outlet } from 'react-router-dom'
 import './App.css'
-import NavBar from './components/NavBar/NavBar';
+// import NavBar from './components/NavBar/NavBar';
 import Footer from './components/Footer/Footer';
+import Header from './pages/Header';
 
 function App() {
 
@@ -10,7 +11,8 @@ function App() {
   return (
     <>
       <div className="">
-        <NavBar></NavBar>
+        {/* <NavBar></NavBar> */}
+        <Header></Header>
       </div>
       {/* <div>
         <Banner></Banner>
