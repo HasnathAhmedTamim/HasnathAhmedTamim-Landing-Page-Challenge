@@ -19,7 +19,7 @@ const NavBar = () => {
 
 
   return (
-    <header className="bg-white border fixed top-0 left-0 right-0 font-primary">
+    <header className="bg-white border  font-primary">
       <nav className="px-24 py-7 max-w-12xl mx-auto  flex justify-between items-center gap-2 ">
         <a href="/" className="">
           <img src="/src/assets/logo/EyeGlass.png" alt="" />
@@ -62,7 +62,7 @@ const NavBar = () => {
       {/* menu item only for mobile */}
       <div>
         <ul
-          className={`text-[#383838] text-xl  gap-7 md:hidden block space-y-4 px-4 py-6  mt-24 bg-white ${isMenuOpen ? "fixed top-0 left-0 w-0 transition-all ease-out duration-150":"hidden"}`}
+          className={`text-[#383838] text-xl  gap-7 md:hidden block space-y-4 px-4 py-6  mt-24 bg-white ${isMenuOpen ? "fixed top-0 left-0 w-0 transition-all bg-white ease-out duration-150":"hidden"}`}
         >
           {navItems.map(({ path, link }) => (
             <>

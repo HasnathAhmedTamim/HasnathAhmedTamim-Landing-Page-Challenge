@@ -8,7 +8,12 @@ function App() {
 
   return (
     <>
-      <div className=''><NavBar></NavBar></div>
+      <div className="">
+        <NavBar></NavBar>
+      </div>
+      {/* <div>
+        <Banner></Banner>
+      </div> */}
       <div className="">
         <Outlet></Outlet>
       </div>
