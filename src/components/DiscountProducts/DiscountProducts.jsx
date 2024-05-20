@@ -1,5 +1,8 @@
+import { Link } from "react-router-dom";
+
 const DiscountProducts = () => {
   return (
+    <Link>
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 p-2 items-center justify-center mb-24">
       <div className="relative bg-red-100 flex justify-center items-center">
         <img
@@ -83,7 +86,7 @@ const DiscountProducts = () => {
           </div>
         </div>
       </div>
-    </div>
+    </div></Link>
   );
 };
 
