@@ -1,15 +1,16 @@
 const Footer = () => {
   return (
-    <footer className="bg-white text-[#383838] py-8 font-primary">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <footer className="bg-white py-8 font-primary">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-12 text-[#383838]">
         {/* First Block: Logo, Text, and Social Icons */}
-        <div className="flex flex-col items-start">
+        <div className="flex flex-col items-start justify-start lg:w-[349px] lg:h-[210px]">
           <img
+            width={150}
             src="/src/assets/logo/EyeGlass.png"
             alt="OptiChroma Logo"
             className="mb-4"
           />
-          <p className="mb-4">
+          <p className="mb-4 font-primary text-[16px] font-normal leading-[26px] text-[#383838] ">
             Latin literature from 45 BC, making it over 2000 years old. Richard
             McClintock, a Latin professor at Hampde
           </p>
@@ -42,9 +43,11 @@ const Footer = () => {
         </div>
 
         {/* Second Block: Support Links */}
-        <div>
-          <h4 className="font-bold mb-4">Support</h4>
-          <ul>
+        <div className="flex flex-col justify-end lg:w-[349px] lg:h-[210px]">
+          <h4 className="font-bold text-[20px] leading-[30px] font-primary mb-4 ">
+            Support
+          </h4>
+          <ul className="font-normal text-[16px] leading-[26px] font-primary">
             <li>
               <a href="/" className="hover:underline">
                 Privacy Policy
@@ -74,9 +77,11 @@ const Footer = () => {
         </div>
 
         {/* Third Block: Company Links */}
-        <div>
-          <h4 className="font-bold mb-4">Quick Links</h4>
-          <ul>
+        <div className="flex flex-col justify-end lg:w-[349px] lg:h-[210px]">
+          <h4 className="font-bold text-[20px] leading-[30px] font-primary mb-4 ">
+            Quick Links
+          </h4>
+          <ul className="font-normal text-[16px] leading-[26px] font-primary">
             <li>
               <a href="/aboutus" className="hover:underline">
                 About Us
@@ -99,19 +104,21 @@ const Footer = () => {
             </li>
             <li>
               <a href="/affiliates" className="hover:underline">
-                Company Info
+                Affiliates
               </a>
             </li>
           </ul>
         </div>
 
         {/* Fourth Block: Resources Links */}
-        <div>
-          <h4 className="font-bold mb-4">Quick Links</h4>
-          <ul>
+        <div className="flex flex-col justify-end lg:w-[349px] lg:h-[210px]">
+          <h4 className="font-bold text-[20px] leading-[30px] font-primary mb-4 ">
+            Resources
+          </h4>
+          <ul className="font-normal text-[16px] leading-[26px] font-primary">
             <li>
               <a href="/" className="hover:underline">
-                Become an affiliate Us
+                Become an Affiliate
               </a>
             </li>
             <li>
@@ -137,16 +144,25 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <hr className="my-5" />
-      <div className="flex justify-between container mx-auto ">
-        <div className="">
-          <small>Copyright &copy; 2023 All rights reserved by Eyeglass</small>
+      <hr className="my-6 border-1 border-[#FED29C]" />
+
+      <div className="flex lg:flex-row flex-col justify-between container mx-auto text-[#545454]">
+        <div className="w-[337px] h-[27px]">
+          <small className="font-normal text-[16px] leading-[26px]">
+            Copyright &copy; 2023 All rights reserved by Eyeglass
+          </small>
         </div>
-        <div className="flex gap-2  justify-end">
-          <a href="/guides" className="hover:underline">
+        <div className="flex gap-x-12">
+          <a
+            href="/guides"
+            className="hover:underline font-normal text-[16px] leading-[26px] w-[92px] h-[27px]"
+          >
             Privacy Policy
           </a>
-          <a href="/guides" className="hover:underline">
+          <a
+            href="/guides"
+            className="hover:underline font-normal text-[16px] leading-[26px] w-[110px] h-[27px]"
+          >
             Terms of service
           </a>
         </div>
