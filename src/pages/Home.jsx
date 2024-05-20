@@ -29,17 +29,17 @@ const Home = () => {
       <div>
         <Banner></Banner>
       </div>
-      <section className="max-w-screen-2xl mx-auto">
-        <div className="">
+      <section className="">
+        <div className="container mx-auto">
           <BuyEasyStep></BuyEasyStep>
         </div>
-        <div className="">
+        <div className="container mx-auto">
           <DiscountProducts></DiscountProducts>
         </div>
         <div className="">
           <AboutUs></AboutUs>
         </div>
-        <div className="">
+        <div className="container mx-auto">
           <Products products={products}></Products>
         </div>
       </section>

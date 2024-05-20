@@ -3,7 +3,8 @@ import { Outlet } from 'react-router-dom'
 import './App.css'
 // import NavBar from './components/NavBar/NavBar';
 import Footer from './components/Footer/Footer';
-import Header from './pages/Header';
+
+import NavBar from './components/NavBar/NavBar';
 
 function App() {
 
@@ -12,7 +13,7 @@ function App() {
     <>
       <div className="">
         {/* <NavBar></NavBar> */}
-        <Header></Header>
+        <NavBar></NavBar>
       </div>
       {/* <div>
         <Banner></Banner>

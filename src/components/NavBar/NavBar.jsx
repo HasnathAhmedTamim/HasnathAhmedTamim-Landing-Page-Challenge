@@ -21,13 +21,15 @@ const NavBar = () => {
 
   return (
     <header className="bg-white border  font-primary">
-      <nav className="px-24 py-7 max-w-12xl mx-auto  flex justify-between items-center gap-2 ">
-        <a href="/" className="">
-          <img src="/src/assets/logo/EyeGlass.png" alt="" />
-        </a>
+      <nav className="px-[23px] py-[41px] container mx-auto  flex justify-between items-center  ">
+        <div className=" w-[194px]">
+          <a href="/" className="">
+            <img src="/src/assets/logo/EyeGlass.png" alt="" />
+          </a>
+        </div>
 
         {/* nav item for lg dev */}
-        <ul className="text-[#383838] text-xl md:flex gap-7 hidden">
+        <ul className="text-[#383838] text-[20px] font-normal leading-[30px] md:flex gap-[8px] hidden">
           {navItems.map(({ path, link }) => (
             <>
               <li key={path}>
@@ -39,23 +41,26 @@ const NavBar = () => {
         </ul>
 
         {/* menu item */}
-        <div className="lg:flex gap-5 items-center hidden">
-          <a href="/shopingcart">
-            <img src="/src/assets/logo/Vector (1).png" alt="" />
-           
-          </a>
-          <a href="/">
-            <img src="/src/assets/logo/Profile icon.png" alt="" />
-          </a>
+        <div className="lg:flex gap-5 items-center font-normal hidden justify-center w-[64px] h-[22px] ">
+          <div className="w-[22px] h-[22px]">
+            <a href="/shopingcart">
+              <img src="/src/assets/logo/Vector (1).png" alt="" />
+            </a>
+          </div>
+          <div className="w-[22px] h-[22px]">
+            <a href="/">
+              <img width={22} src="/src/assets/logo/Profile icon.png" alt="" />
+            </a>
+          </div>
         </div>
 
         {/* mobile button and display */}
-        <div className="md:hidden">
+        <div className="md:hidden font-primary">
           <button onClick={toggleMenu} className="cursor-pointer">
             {isMenuOpen ? (
-              <FaXmark></FaXmark>
+              <FaXmark className="w-[22px] h-[22px]"></FaXmark>
             ) : (
-              <FaBars className="w-5 h-5"></FaBars>
+              <FaBars className="w-[22px] h-[22px]"></FaBars>
             )}
           </button>
         </div>
@@ -64,9 +69,9 @@ const NavBar = () => {
       {/* menu item only for mobile */}
       <div>
         <ul
-          className={`text-[#383838] text-xl  gap-7 md:hidden block space-y-4 px-4 py-6  mt-24 bg-white ${
+          className={`text-[#383838] text-xl font-primary gap-7 md:hidden block space-y-4 px-4 py-6  mt-24 bg-white ${
             isMenuOpen
-              ? "fixed top-0 left-0 w-0 transition-all bg-white ease-out duration-150"
+              ? "fixed top-0 left-0 w-0 transition-all bg-white ease-out duration-150 "
               : "hidden"
           }`}
         >
