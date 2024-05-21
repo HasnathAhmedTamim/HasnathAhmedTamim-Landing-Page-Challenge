@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { FaXmark } from "react-icons/fa6";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import CartList from "../CartList/CartList";
 
-const NavBar = () => {
+const NavBar = (props) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
@@ -16,11 +17,15 @@ const NavBar = () => {
     { path: "/features", link: "Features" },
     { path: "/reviews", link: "Reviews" },
     { path: "/contactus", link: "Contact Us" },
+    
   ];
 
   return (
     <header className="bg-white border font-primary">
-      <nav className="px-[23px] py-[41px] container mx-auto flex justify-between items-center">
+      <nav
+        onClick={() => props.handleShow(false)}
+        className="px-[23px] py-[41px] container mx-auto flex justify-between items-center"
+      >
         <div className="w-[194px]">
           <a href="/" className="">
             <img src="/src/assets/logo/EyeGlass.png" alt="Logo" />
@@ -38,12 +43,21 @@ const NavBar = () => {
 
         {/* menu items for large devices */}
         <div className="lg:flex gap-5 items-center font-normal hidden justify-center w-[64px] h-[22px]">
-          <div className="w-[22px] h-[22px] flex">
-            <sup className="font-bold">3</sup>
-            <a href="/shoppingcart">
-              <img src="/src/assets/logo/Vector (1).png" alt="Cart" />
-            </a>
+          <div
+            onClick={() => props.handleShow(true)}
+            className="w-[22px] h-[22px] flex"
+          >
+            <div className="">
+              <div>
+                <Link to={CartList}>
+                  <img src="/src/assets/logo/Vector (1).png" alt="Cart" />
+                  <sup className="font-bold"> {props.count} </sup>
+                </Link>
+              </div>
+              
+            </div>
           </div>
+
           <div className="w-[22px] h-[22px]">
             <a href="/">
               <img

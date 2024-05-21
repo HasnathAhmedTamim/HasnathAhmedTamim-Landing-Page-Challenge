@@ -10,11 +10,12 @@ import Products from './pages/Products.jsx';
 import Features from './pages/Features.jsx';
 import Reviews from './pages/Reviews.jsx';
 import Contact from './pages/Contact.jsx';
-import ShopingCart from './pages/ShopingCart.jsx';
+import CartList from './components/CartList/CartList.jsx';
+
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App ></App>,
+    element: <App></App>,
     children: [
       {
         path: "/",
@@ -41,8 +42,8 @@ const router = createBrowserRouter([
         element: <Contact></Contact>,
       },
       {
-        path: "/shopingcart",
-        element: <ShopingCart ></ShopingCart>,
+        path: "/shoppingcart",
+        element: <CartList></CartList>,
       },
     ],
   },

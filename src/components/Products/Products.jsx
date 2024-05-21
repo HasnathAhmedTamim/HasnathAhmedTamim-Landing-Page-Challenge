@@ -10,12 +10,12 @@ import "swiper/css/pagination";
 // import required modules
 // import { Pagination } from "swiper/modules";
 import Test from "../Test/Test";
-const Products = (props) => {
-   const products = props.products;
+const Products = (props ) => {
+  const products = props.products;
   return (
     <div className="mb-24">
       <div className="  ">
-        <Test products={products}></Test>
+        <Test products={products} addToCart={props.addToCart} />
       </div>
     </div>
   );

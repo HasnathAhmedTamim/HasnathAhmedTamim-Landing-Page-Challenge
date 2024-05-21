@@ -4,12 +4,20 @@ import Banner from "../components/Banner/Banner";
 import BuyEasyStep from "../components/BuyEasyStep/BuyEasyStep";
 import DiscountProducts from "../components/DiscountProducts/DiscountProducts";
 import Products from "../components/Products/Products";
-import NavBar from './../components/NavBar/NavBar';
+import NavBar from "./../components/NavBar/NavBar";
+import CartList from "../components/CartList/CartList";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
-  
-  console.log(products)
+  const [cart, setCart] = useState([]);
+  const [showCart,setShowCart] = useState(false)
+  // Function to add item to cart
+const addToCart = (data) => {
+  // console.log(data); // Placeholder, replace with your actual logic to add item to cart
+  setCart([...cart,{...data , quantity : 1}])
+};
+console.log(cart)
+
   useEffect(() => {
     fetch("/db.json")
       .then((response) => {
@@ -27,11 +35,15 @@ const Home = () => {
       });
   }, []);
 
+  const handleShow = (value)=>{
+    setShowCart(value)
+  }
   return (
     <div className="">
       <div>
-        <NavBar></NavBar>
+        <NavBar count={cart.length} handleShow={handleShow} ></NavBar>
       </div>
+
       <div>
         <Banner></Banner>
       </div>
@@ -46,11 +58,15 @@ const Home = () => {
           <AboutUs></AboutUs>
         </div>
         <div className="container mx-auto">
-          <Products products={products}></Products>
+          {
+            showCart ? 
+            <CartList cart={cart}></CartList> :
+          <Products products={products} addToCart={addToCart} />
+          }
         </div>
       </section>
     </div>
   );
 };
 
-export default Home
+export default Home;
