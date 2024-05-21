@@ -19,7 +19,7 @@ const Test = (props) => {
             premium collection of eyeglasses.
           </p>
         </div>
-        <div className="lg:w-[248px] lg:h-[36px] text-[##545454] font-primary flex flex-col lg:flex-row justify-end">
+        <div className="lg:w-[248px] lg:h-[36px] text-[#545454] font-primary flex flex-col lg:flex-row justify-end">
           <button className="lg:px-[5px] lg:py-[20px] bg-white text-center items-center justify-center flex font-normal text-[16px]">
             Latest
           </button>
@@ -35,9 +35,9 @@ const Test = (props) => {
         {products?.map((product) => (
           <div
             key={product.id}
-            className="lg:w-[417px] lg:h-[630px] w-1/2 lg:p-2 cursor-pointer hover:-translate-y-3 transition-all duration-300  items-center justify-center"
+            className="relative lg:w-[417px] lg:h-[630px] w-1/2 lg:p-2 cursor-pointer hover:-translate-y-3 transition-all duration-300 items-center justify-center"
           >
-            <div className="bg-[#F7F7F7]  items-center justify-center p-24 lg:justify-center lg:flex-col grid lg:pl-[37px] lg:pt-[145px] lg:pb-[115px] lg:pr-[37px]  ">
+            <div className="bg-[#F7F7F7] items-center justify-center p-24 lg:justify-center lg:flex-col grid lg:pl-[37px] lg:pt-[145px] lg:pb-[115px] lg:pr-[37px] relative">
               {product.price >= 100 && (
                 <img
                   className="absolute top-[10px] left-[10px] w-[60px]"
@@ -47,7 +47,7 @@ const Test = (props) => {
               )}
 
               <img
-                className="lg:w-[343px] lg:h-[212px] w-1/2 "
+                className="lg:w-[343px] lg:h-[212px] w-1/2"
                 src={product.image || ProductImg1}
                 alt={product.name}
               />

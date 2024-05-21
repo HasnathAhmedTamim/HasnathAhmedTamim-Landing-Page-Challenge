@@ -13,7 +13,7 @@ function App() {
     <>
       <div className="">
         {/* <NavBar></NavBar> */}
-        <NavBar></NavBar>
+        {/* <NavBar></NavBar> */}
       </div>
       {/* <div>
         <Banner></Banner>

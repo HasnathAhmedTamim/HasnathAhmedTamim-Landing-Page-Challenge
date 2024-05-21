@@ -4,10 +4,12 @@ import Banner from "../components/Banner/Banner";
 import BuyEasyStep from "../components/BuyEasyStep/BuyEasyStep";
 import DiscountProducts from "../components/DiscountProducts/DiscountProducts";
 import Products from "../components/Products/Products";
+import NavBar from './../components/NavBar/NavBar';
 
 const Home = () => {
   const [products, setProducts] = useState([]);
-
+  
+  console.log(products)
   useEffect(() => {
     fetch("/db.json")
       .then((response) => {
@@ -24,8 +26,12 @@ const Home = () => {
         console.error("There was an error fetching the products!", error);
       });
   }, []);
+
   return (
     <div className="">
+      <div>
+        <NavBar></NavBar>
+      </div>
       <div>
         <Banner></Banner>
       </div>
