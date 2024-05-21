@@ -1,3 +1,9 @@
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination } from "swiper/modules";
+
 import ProductImg1 from "../../assets/productimages/block1mg.png";
 import DiscountImg from "../../assets/logo/Discount.png";
 import SaleImg from "../../assets/logo/Sale.png";
@@ -38,27 +44,85 @@ const Test = (props) => {
               key={product.id}
               className="relative lg:w-[417px] lg:h-[630px] w-full lg:p-2 cursor-pointer hover:-translate-y-3 transition-all duration-300 items-center justify-center"
             >
-              <div className="bg-[#F7F7F7] items-center justify-center p-24 lg:justify-center lg:flex-col grid lg:pl-[37px] lg:pt-[145px] lg:pb-[115px] lg:pr-[37px] relative">
-                {product.price >= 100 && (
-                  <img
-                    className="absolute top-[10px] left-[10px] w-[60px]"
-                    src={DiscountImg}
-                    alt="Discount"
-                  />
-                )}
-                <img
-                  className="lg:w-[343px] lg:h-[212px] w-1/2"
-                  src={product.image || ProductImg1}
-                  alt={product.name}
-                />
-                {product.price >= 100 && (
-                  <img
-                    className="absolute top-[10px] right-[10px] w-[60px]"
-                    src={SaleImg}
-                    alt="Sale"
-                  />
-                )}
-              </div>
+              <Swiper
+                pagination={{
+                  dynamicBullets: true,
+                }}
+                modules={[Pagination]}
+                spaceBetween={30}
+                slidesPerView={1}
+                className="mySwiper"
+              >
+                <SwiperSlide>
+                  <div className="bg-[#F7F7F7] items-center justify-center p-24 lg:justify-center lg:flex-col grid lg:pl-[37px] lg:pt-[145px] lg:pb-[115px] lg:pr-[37px] relative">
+                    {product.price >= 100 && (
+                      <img
+                        className="absolute top-[10px] left-[10px] w-[60px]"
+                        src={DiscountImg}
+                        alt="Discount"
+                      />
+                    )}
+                    <img
+                      className="lg:w-[343px] lg:h-[212px] w-1/2"
+                      src={product.image || ProductImg1}
+                      alt={product.name}
+                    />
+                    {product.price >= 100 && (
+                      <img
+                        className="absolute top-[10px] right-[10px] w-[60px]"
+                        src={SaleImg}
+                        alt="Sale"
+                      />
+                    )}
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="bg-[#F7F7F7] items-center justify-center p-24 lg:justify-center lg:flex-col grid lg:pl-[37px] lg:pt-[145px] lg:pb-[115px] lg:pr-[37px] relative">
+                    {product.price >= 100 && (
+                      <img
+                        className="absolute top-[10px] left-[10px] w-[60px]"
+                        src={DiscountImg}
+                        alt="Discount"
+                      />
+                    )}
+                    <img
+                      className="lg:w-[343px] lg:h-[212px] w-1/2"
+                      src={product.image || ProductImg1}
+                      alt={product.name}
+                    />
+                    {product.price >= 100 && (
+                      <img
+                        className="absolute top-[10px] right-[10px] w-[60px]"
+                        src={SaleImg}
+                        alt="Sale"
+                      />
+                    )}
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="bg-[#F7F7F7] items-center justify-center p-24 lg:justify-center lg:flex-col grid lg:pl-[37px] lg:pt-[145px] lg:pb-[115px] lg:pr-[37px] relative">
+                    {product.price >= 100 && (
+                      <img
+                        className="absolute top-[10px] left-[10px] w-[60px]"
+                        src={DiscountImg}
+                        alt="Discount"
+                      />
+                    )}
+                    <img
+                      className="lg:w-[343px] lg:h-[212px] w-1/2"
+                      src={product.image || ProductImg1}
+                      alt={product.name}
+                    />
+                    {product.price >= 100 && (
+                      <img
+                        className="absolute top-[10px] right-[10px] w-[60px]"
+                        src={SaleImg}
+                        alt="Sale"
+                      />
+                    )}
+                  </div>
+                </SwiperSlide>
+              </Swiper>
               <h1 className="font-normal leading-[40px] lg:text-[30px] text-[#383838] font-primary">
                 {product.name}
               </h1>
