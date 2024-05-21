@@ -1,4 +1,3 @@
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -38,11 +37,11 @@ const Test = (props) => {
         </div>
       </div>
       <div className="flex justify-center">
-        <div className="font-primary grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-[88px]">
+        <div className="font-primary grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-[88px]">
           {products?.map((product) => (
             <div
               key={product.id}
-              className="relative lg:w-[417px] lg:h-[630px] w-full lg:p-2 cursor-pointer hover:-translate-y-3 transition-all duration-300 items-center justify-center"
+              className="relative w-full max-w-[417px] lg:w-[417px] lg:h-[630px] p-4 cursor-pointer hover:-translate-y-3 transition-all duration-300"
             >
               <Swiper
                 pagination={{
@@ -53,96 +52,52 @@ const Test = (props) => {
                 slidesPerView={1}
                 className="mySwiper"
               >
-                <SwiperSlide>
-                  <div className="bg-[#F7F7F7] items-center justify-center p-24 lg:justify-center lg:flex-col grid lg:pl-[37px] lg:pt-[145px] lg:pb-[115px] lg:pr-[37px] relative">
-                    {product.price >= 100 && (
+                {[
+                  product.image || ProductImg1,
+                  product.image || ProductImg1,
+                  product.image || ProductImg1,
+                ].map((image, index) => (
+                  <SwiperSlide key={index}>
+                    <div className="bg-[#F7F7F7] flex items-center justify-center lg:flex-col lg:p-24 relative">
+                      {product.price >= 100 && (
+                        <img
+                          className="absolute top-[10px] left-[10px] w-[60px]"
+                          src={DiscountImg}
+                          alt="Discount"
+                        />
+                      )}
                       <img
-                        className="absolute top-[10px] left-[10px] w-[60px]"
-                        src={DiscountImg}
-                        alt="Discount"
+                        className="lg:w-[343px] lg:h-[212px] w-1/2"
+                        src={image}
+                        alt={product.name}
                       />
-                    )}
-                    <img
-                      className="lg:w-[343px] lg:h-[212px] w-1/2"
-                      src={product.image || ProductImg1}
-                      alt={product.name}
-                    />
-                    {product.price >= 100 && (
-                      <img
-                        className="absolute top-[10px] right-[10px] w-[60px]"
-                        src={SaleImg}
-                        alt="Sale"
-                      />
-                    )}
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="bg-[#F7F7F7] items-center justify-center p-24 lg:justify-center lg:flex-col grid lg:pl-[37px] lg:pt-[145px] lg:pb-[115px] lg:pr-[37px] relative">
-                    {product.price >= 100 && (
-                      <img
-                        className="absolute top-[10px] left-[10px] w-[60px]"
-                        src={DiscountImg}
-                        alt="Discount"
-                      />
-                    )}
-                    <img
-                      className="lg:w-[343px] lg:h-[212px] w-1/2"
-                      src={product.image || ProductImg1}
-                      alt={product.name}
-                    />
-                    {product.price >= 100 && (
-                      <img
-                        className="absolute top-[10px] right-[10px] w-[60px]"
-                        src={SaleImg}
-                        alt="Sale"
-                      />
-                    )}
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="bg-[#F7F7F7] items-center justify-center p-24 lg:justify-center lg:flex-col grid lg:pl-[37px] lg:pt-[145px] lg:pb-[115px] lg:pr-[37px] relative">
-                    {product.price >= 100 && (
-                      <img
-                        className="absolute top-[10px] left-[10px] w-[60px]"
-                        src={DiscountImg}
-                        alt="Discount"
-                      />
-                    )}
-                    <img
-                      className="lg:w-[343px] lg:h-[212px] w-1/2"
-                      src={product.image || ProductImg1}
-                      alt={product.name}
-                    />
-                    {product.price >= 100 && (
-                      <img
-                        className="absolute top-[10px] right-[10px] w-[60px]"
-                        src={SaleImg}
-                        alt="Sale"
-                      />
-                    )}
-                  </div>
-                </SwiperSlide>
+                      {product.price >= 100 && (
+                        <img
+                          className="absolute top-[10px] right-[10px] w-[60px]"
+                          src={SaleImg}
+                          alt="Sale"
+                        />
+                      )}
+                    </div>
+                  </SwiperSlide>
+                ))}
               </Swiper>
-              <h1 className="font-normal leading-[40px] lg:text-[30px] text-[#383838] font-primary">
+              <h1 className="font-normal leading-[40px] lg:text-[30px] text-[#383838] font-primary mt-4 text-left lg:text-left">
                 {product.name}
               </h1>
-              <div className="flex gap-2">
+              <div className="flex gap-2 mt-2 justify-left lg:justify-start">
                 <p className="font-bold leading-[30px] lg:text-[20px] text-[#383838]">
                   <span>$</span>
                   {product.discountPrice}
                 </p>
-                <p className="font-bold leading-[30px] lg:text-[20px] text-[#545454] line-through">
-                  {product.price !== null ? (
-                    <>
-                      <span>$</span>
-                      {product.price}
-                    </>
-                  ) : (
-                    ""
-                  )}
-                </p>
+                {product.price && (
+                  <p className="font-bold leading-[30px] lg:text-[20px] text-[#545454] line-through">
+                    <span>$</span>
+                    {product.price}
+                  </p>
+                )}
               </div>
-              <div>
+              <div className="mt-2 flex justify-left lg:justify-start">
                 <button
                   onClick={() => props.addToCart(product)}
                   className="underline cursor-pointer"
