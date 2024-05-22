@@ -26,9 +26,10 @@ Components are organized within dedicated folders:
 
 - `src/components/NavBar/NavBar.jsx`: Navbar created
 
-- `src/components`: contains components like `/src/components/NavBar/NavBar.jsx`, `/src/components/Banner/Banner.jsx`, `/src/components/BuyEasyStep/BuyEasyStep.jsx` ,`/src/components/DiscountProducts/DiscountProducts.jsx`, `/src/components/Products` , `/src/components/ProductCard/ProductCard.jsx`.
+- `src/components`: contains components like `/src/components/NavBar/NavBar.jsx`, `/src/components/Banner/Banner.jsx`, `/src/components/BuyEasyStep/BuyEasyStep.jsx` ,`/src/components/DiscountProducts/DiscountProducts.jsx`, `/src/components/Products` , `/src/components/ProductCard/ProductCard.jsx` ,`/src/components/Modal/Modal.jsx` and `src/components/CartList/CartList.jsx`.
 
-- `src/components/ProductCard/ProductCard.jsx`: In Table Component i did product card structure then mapping over data to render that products card.
+- `src/components/ProductCard/ProductCard.jsx`: In this Component i did product card structure then mapping over data to render that products card.
+-`src/components/Modal/Modal.jsx` : in this component add cart product functionality did
 
 - `src/main.jsx`: Render the child components based on the route in Layout Folder which is Main component
 
