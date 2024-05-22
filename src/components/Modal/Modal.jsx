@@ -1,4 +1,3 @@
-import React from "react";
 
 function Modal({ cartItems, isOpen, toggleModal }) {
   const getTotalPrice = () => {
@@ -8,25 +7,6 @@ function Modal({ cartItems, isOpen, toggleModal }) {
     );
   };
 
-  const handleIncreaseQuantity = (itemId) => {
-    const updatedCartItems = cartItems.map((item) => {
-      if (item.id === itemId) {
-        return { ...item, quantity: item.quantity + 1 };
-      }
-      return item;
-    });
-    setCartItems(updatedCartItems);
-  };
-
-  const handleDecreaseQuantity = (itemId) => {
-    const updatedCartItems = cartItems.map((item) => {
-      if (item.id === itemId && item.quantity > 1) {
-        return { ...item, quantity: item.quantity - 1 };
-      }
-      return item;
-    });
-    setCartItems(updatedCartItems);
-  };
 
   return (
     <>

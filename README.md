@@ -2,7 +2,7 @@
 
 ## Project Goal
 
-This project is a landing page and buy products with user interface built with ReactJS, Vite, and Tailwind CSS, adhering to a provided design. It features a search form and a data display area showcasing products results.
+This project is a landing page and buy products with user interface built with ReactJS, Vite, and Tailwind CSS, adhering to a provided design. It features a cart functionality form and a data display area showcasing products results.
 
 ## Technology Stack
 
@@ -26,9 +26,9 @@ Components are organized within dedicated folders:
 
 - `src/components/NavBar/NavBar.jsx`: Navbar created
 
-- `src/components`: contains components like `/src/components/NavBar/NavBar.jsx`, `/src/components/Banner/Banner.jsx`, `/src/components/BuyEasyStep/BuyEasyStep.jsx` ,`/src/components/DiscountProducts/DiscountProducts.jsx`, `/src/components/Products` , `/src/components/Test/Test.jsx`.
+- `src/components`: contains components like `/src/components/NavBar/NavBar.jsx`, `/src/components/Banner/Banner.jsx`, `/src/components/BuyEasyStep/BuyEasyStep.jsx` ,`/src/components/DiscountProducts/DiscountProducts.jsx`, `/src/components/Products` , `/src/components/ProductCard/ProductCard.jsx`.
 
-- `src/components/Test/Test.jsx`: In Table Component i did product card structure then mapping over data to render that products card.
+- `src/components/ProductCard/ProductCard.jsx`: In Table Component i did product card structure then mapping over data to render that products card.
 
 - `src/main.jsx`: Render the child components based on the route in Layout Folder which is Main component
 
