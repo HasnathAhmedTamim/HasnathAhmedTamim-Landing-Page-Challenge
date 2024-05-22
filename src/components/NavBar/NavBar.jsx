@@ -21,7 +21,7 @@ const NavBar = (props) => {
   return (
     <header className="bg-white border font-primary fixed top-0 left-0 w-full z-50">
       <nav
-        onClick={() => props.handleShow(false)}
+        // onClick={() => props.handleShow(false)}
         className="px-[90px] py-[30px] flex justify-between items-center w-full"
       >
         <div className="w-[194px]">

@@ -7,7 +7,7 @@ import ProductImg1 from "../../assets/productimages/block1mg.png";
 import DiscountImg from "../../assets/logo/Discount.png";
 import SaleImg from "../../assets/logo/Sale.png";
 
-const Test = (props) => {
+const ProductCard = (props) => {
   const products = props.products;
 
   return (
@@ -112,4 +112,4 @@ const Test = (props) => {
   );
 };
 
-export default Test;
+export default ProductCard;

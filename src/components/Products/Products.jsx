@@ -9,13 +9,13 @@ import "swiper/css/pagination";
 
 // import required modules
 // import { Pagination } from "swiper/modules";
-import Test from "../Test/Test";
+import ProductCard from "../ProductCard/ProductCard";
 const Products = (props ) => {
   const products = props.products;
   return (
     <div className="mb-24">
       <div className="  ">
-        <Test products={products} addToCart={props.addToCart} />
+        <ProductCard products={products}  />
       </div>
     </div>
   );

@@ -3,20 +3,20 @@ import AboutUs from "../components/AboutUs/AboutUs";
 import Banner from "../components/Banner/Banner";
 import BuyEasyStep from "../components/BuyEasyStep/BuyEasyStep";
 import DiscountProducts from "../components/DiscountProducts/DiscountProducts";
-import Products from "../components/Products/Products";
+import ProductCard from "../components/ProductCard/ProductCard";
 
 // import CartList from "../components/CartList/CartList";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
-  const [cart, setCart] = useState([]);
-  // const [showCart,setShowCart] = useState(false)
-  // Function to add item to cart
-const addToCart = (data) => {
-  // console.log(data); // Placeholder, replace with your actual logic to add item to cart
-  setCart([...cart,{...data , quantity : 1}])
-};
-console.log(cart)
+//   const [cart, setCart] = useState([]);
+//   // const [showCart,setShowCart] = useState(false)
+//   // Function to add item to cart
+// const addToCart = (data) => {
+//   // console.log(data); // Placeholder, replace with your actual logic to add item to cart
+//   setCart([...cart,{...data , quantity : 1}])
+// };
+// console.log(cart)
 
   useEffect(() => {
     fetch("/db.json")
@@ -40,8 +40,6 @@ console.log(cart)
   // }
   return (
     <div className="">
-     
-
       <div>
         <Banner></Banner>
       </div>
@@ -56,11 +54,11 @@ console.log(cart)
           <AboutUs></AboutUs>
         </div>
         <div className="container mx-auto">
-          {
-            // showCart ? 
-            // <CartList cart={cart}></CartList> :
-          <Products products={products} addToCart={addToCart} />
-          }
+        
+           
+             {/* <CartList cart={cart}></CartList> : */}
+            <ProductCard products={products} />
+         
         </div>
       </section>
     </div>
