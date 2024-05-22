@@ -38,7 +38,7 @@ const NavBar = (props) => {
           <div className="w-[22px] h-[22px] flex">
             <div className="cursor-pointer" onClick={props.toggleModal}>
               <div className="flex">
-                <img src="/src/assets/logo/Vector (1).png" alt="Cart" />
+                <img src="https://i.ibb.co/0VcbsRp/Vector-1.png" alt="Cart" />
                 {props.count > 0 && (
                   <sup className="font-bold"> {props.count} </sup>
                 )}
@@ -50,7 +50,7 @@ const NavBar = (props) => {
             <a href="/">
               <img
                 width={22}
-                src="/src/assets/logo/Profile icon.png"
+                src="https://i.ibb.co/FqRgVVF/Profile-icon.png"
                 alt="Profile"
               />
             </a>
