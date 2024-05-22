@@ -5,42 +5,42 @@
       "name": "Bravo Sunglasses",
       "price": 150,
       "discountPrice": 100,
-      "image": "/src/assets/productimages/block1mg.png"
+      "image": "https://i.ibb.co/TW7FBjW/block1mg.png"
     },
     {
       "id": 2,
       "name": "Vincent Chase",
       "price": 150,
       "discountPrice": 120,
-      "image": "/src/assets/productimages/block2img.png"
+      "image": "https://i.ibb.co/NV6YLkc/block2img.png"
     },
     {
       "id": 3,
       "name": "John Jacobs",
       "price": null,
       "discountPrice": 100,
-      "image": "/src/assets/productimages/block3img.png"
+      "image": "https://i.ibb.co/NV6YLkc/block2img.png"
     },
     {
       "id": 4,
       "name": "Tommy Hilfiger",
       "price": 150,
       "discountPrice": 130,
-      "image": "/src/assets/productimages/block4img.png"
+      "image": "https://i.ibb.co/34snCPc/block4img.png"
     },
     {
       "id": 5,
       "name": "Ray Ban",
       "price": null,
       "discountPrice": 100,
-      "image": "/src/assets/productimages/block5img.png"
+      "image": "https://i.ibb.co/qMqp6jx/block5img.png"
     },
     {
       "id": 6,
       "name": "Occhiali",
       "price": 150,
       "discountPrice": 110,
-      "image": "/src/assets/productimages/block6img.png"
+      "image": "https://i.ibb.co/TW7FBjW/block1mg.png"
     }
   ]
 }
