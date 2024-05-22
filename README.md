@@ -37,8 +37,8 @@ Components are organized within dedicated folders:
 
 ## Projects Links
 
-* Live Link: [Live Link project 1](#)
-* Repo Link: [Link live project 2](#)
+* Live Link: [Live Link](https://hasnath-ahmed-tamim-landing-page-challenge.vercel.app/)
+* Repo Link: [Github](https://github.com/HasnathAhmedTamim/HasnathAhmedTamim-Landing-Page-Challenge)
 
 ## Author
 
@@ -52,4 +52,4 @@ Feel free to reach out with any questions:
 * [FaceBook](https://www.facebook.com/HasnathAhmedTamim)
 
 # VIDEO DEPLOY
-* [Deploy Video](#)
+* [Deploy Video](https://drive.google.com/file/d/1vuCkNYYuKvy_aWcxHpIYEJ0l-jnZt6r1/view?usp=sharing)
