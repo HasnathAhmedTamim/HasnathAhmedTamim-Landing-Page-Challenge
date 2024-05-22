@@ -29,7 +29,7 @@ function Modal({ cartItems, isOpen, toggleModal }) {
                   <img
                     src={item.image}
                     alt={item.name}
-                    className="w-16 h-16 rounded-full object-cover mr-4"
+                    className="w-36 h-36 rounded object-contain mr-4 bg-[#F7F7F7] "
                   />
                   <div>
                     <h3 className="font-semibold">{item.name}</h3>
@@ -43,11 +43,10 @@ function Modal({ cartItems, isOpen, toggleModal }) {
                     </div>
                     <div className="flex items-center">
                       <span className="text-gray-500 mr-2">Quantity:</span>
-                     
+
                       <span className="font-semibold mx-2">
                         {item.quantity}
                       </span>
-                     
                     </div>
                     <div className="flex items-center">
                       <span className="text-gray-500 mr-2">Total:</span>
