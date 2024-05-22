@@ -22,7 +22,7 @@ const NavBar = (props) => {
       <nav className="px-[90px] py-[30px] flex justify-between items-center w-full">
         <div className="w-[194px]">
           <a href="/">
-            <img src="/src/assets/logo/EyeGlass.png" alt="Logo" />
+            <img src="https://i.ibb.co/T4vXLpW/EyeGlass.png" alt="Logo" />
           </a>
         </div>
 
@@ -89,7 +89,7 @@ const NavBar = (props) => {
             <a href="/shoppingcart">
               <img
                 className="w-[22px] h-[22px]"
-                src="/src/assets/logo/Vector (1).png"
+                src="https://i.ibb.co/0VcbsRp/Vector-1.png"
                 alt="Cart"
               />
             </a>
@@ -98,7 +98,7 @@ const NavBar = (props) => {
             <a href="/">
               <img
                 width={22}
-                src="/src/assets/logo/Profile icon.png"
+                src="https://i.ibb.co/FqRgVVF/Profile-icon.png"
                 alt="Profile"
               />
             </a>

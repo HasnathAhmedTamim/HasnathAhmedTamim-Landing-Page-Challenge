@@ -13,7 +13,8 @@ const AboutUs = () => {
           stylish eyewear. That's why we've designed a collection of frames that
           prioritize both form and function. <br />
           <span className="lg:py-2 block font-normal leading-[20px] ">
-            Our team of experts is dedicated to helping you find the perfect{" "} <br />
+            Our team of experts is dedicated to helping you find the perfect{" "}
+            <br />
             pair of glasses.
           </span>
         </p>
@@ -23,7 +24,7 @@ const AboutUs = () => {
       </div>
       {/* right div */}
       <div className="flex justify-center lg:justify-end">
-        <img src="/src/assets/logo/sunglass.png" alt="" />
+        <img src="https://i.ibb.co/Hgk944S/sunglass.png" alt="" />
       </div>
     </div>
   );
