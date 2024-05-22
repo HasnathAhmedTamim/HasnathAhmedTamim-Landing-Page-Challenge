@@ -55,4 +55,3 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     </div>
   </React.StrictMode>
 );
-// max-w-screen-2xl mx-auto

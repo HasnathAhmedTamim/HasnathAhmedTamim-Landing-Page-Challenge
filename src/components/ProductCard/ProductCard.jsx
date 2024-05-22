@@ -98,7 +98,7 @@ const ProductCard = (props) => {
               </div>
               <div className="mt-2 flex justify-left lg:justify-start">
                 <button
-                  onClick={() => props.addToCart(product)}
+                  onClick={() => props.addItems(product)}
                   className="underline cursor-pointer"
                 >
                   Add To cart

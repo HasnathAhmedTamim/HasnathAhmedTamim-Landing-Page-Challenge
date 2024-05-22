@@ -7,16 +7,8 @@ import ProductCard from "../components/ProductCard/ProductCard";
 
 // import CartList from "../components/CartList/CartList";
 
-const Home = () => {
+const Home = ({addItems}) => {
   const [products, setProducts] = useState([]);
-//   const [cart, setCart] = useState([]);
-//   // const [showCart,setShowCart] = useState(false)
-//   // Function to add item to cart
-// const addToCart = (data) => {
-//   // console.log(data); // Placeholder, replace with your actual logic to add item to cart
-//   setCart([...cart,{...data , quantity : 1}])
-// };
-// console.log(cart)
 
   useEffect(() => {
     fetch("/db.json")
@@ -57,7 +49,7 @@ const Home = () => {
         
            
              {/* <CartList cart={cart}></CartList> : */}
-            <ProductCard products={products} />
+            <ProductCard products={products} addItems={addItems}/>
          
         </div>
       </section>
