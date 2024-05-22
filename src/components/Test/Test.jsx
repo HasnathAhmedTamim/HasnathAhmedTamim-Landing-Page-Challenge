@@ -24,14 +24,15 @@ const Test = (props) => {
             premium collection of eyeglasses.
           </p>
         </div>
+        {/* sell button */}
         <div className="lg:w-[248px] lg:h-[36px] text-[#545454] font-primary flex flex-col lg:flex-row justify-end">
-          <button className="lg:px-[5px] lg:py-[20px] bg-white text-center items-center justify-center flex font-normal text-[16px]">
+          <button className="lg:px-[5px] lg:py-[20px] bg-white text-center items-center justify-center lg:w-[90px] lg:h-[36px] flex font-normal text-[16px]">
             Latest
           </button>
-          <button className="lg:px-[5px] lg:py-[20px] bg-white border text-center items-center justify-center flex font-normal text-[16px]">
+          <button className="lg:px-[5px] lg:py-[20px] bg-white border rounded-[5px] lg:w-[90px] lg:h-[36px] text-center items-center justify-center flex font-normal text-[16px]">
             Special
           </button>
-          <button className="lg:px-[5px] lg:py-[20px] bg-white text-center items-center justify-center flex font-normal text-[16px]">
+          <button className="lg:px-[5px] lg:py-[20px] bg-white text-center items-center justify-center lg:w-[90px] lg:h-[36px] flex font-normal text-[16px]">
             Best sell
           </button>
         </div>
