@@ -41,7 +41,7 @@ const Test = (props) => {
           {products?.map((product) => (
             <div
               key={product.id}
-              className="relative w-full max-w-[417px] lg:w-[417px] lg:h-[630px] p-4 cursor-pointer hover:-translate-y-3 transition-all duration-300"
+              className="relative w-full max-w-[417px] lg:w-[417px] p-4 cursor-pointer hover:-translate-y-3 transition-all duration-300"
             >
               <Swiper
                 pagination={{
@@ -67,17 +67,15 @@ const Test = (props) => {
                         />
                       )}
                       <img
-                        className="lg:w-[343px] lg:h-[212px] w-1/2 "
+                        className="lg:w-[343px]"
                         src={image}
                         alt={product.name}
                       />
-                      {product.price >= 100 && (
-                        <img
-                          className="absolute top-[10px] right-[10px] w-[60px]"
-                          src={SaleImg}
-                          alt="Sale"
-                        />
-                      )}
+                      <img
+                        className="absolute top-[10px] right-[10px] w-[60px]"
+                        src={SaleImg}
+                        alt="Sale"
+                      />
                     </div>
                   </SwiperSlide>
                 ))}

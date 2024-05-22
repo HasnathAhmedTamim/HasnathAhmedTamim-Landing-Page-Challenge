@@ -22,7 +22,7 @@ const NavBar = (props) => {
     <header className="bg-white border font-primary fixed top-0 left-0 w-full z-50">
       <nav
         onClick={() => props.handleShow(false)}
-        className="px-[23px] py-[41px] container mx-auto flex justify-between items-center lg:w-[1600px] lg:h-[47px]"
+        className="px-[90px] py-[30px] flex justify-between items-center w-full"
       >
         <div className="w-[194px]">
           <a href="/" className="">
@@ -40,7 +40,7 @@ const NavBar = (props) => {
         </ul>
 
         {/* menu items for large devices */}
-        <div className="lg:flex gap-1 lg:gap-5 items-center font-normal hidden justify-center lg:w-[64px] lg:h-[22px]">
+        <div className="lg:flex w-[194px] gap-1 lg:gap-5 items-center font-normal hidden justify-end">
           <div
             onClick={() => props.handleShow(true)}
             className="w-[22px] h-[22px] flex"
