@@ -24,7 +24,7 @@ const NavBar = (props) => {
     <header className="bg-white border font-primary">
       <nav
         onClick={() => props.handleShow(false)}
-        className="px-[23px] py-[41px] container mx-auto flex justify-between items-center"
+        className="px-[23px] py-[41px] container mx-auto flex justify-between items-center lg:w-[1600px] lg:h-[47px]"
       >
         <div className="w-[194px]">
           <a href="/" className="">
@@ -33,7 +33,7 @@ const NavBar = (props) => {
         </div>
 
         {/* nav items for large devices */}
-        <ul className="text-[#383838] text-[20px] font-normal leading-[30px] md:flex gap-[8px] hidden">
+        <ul className="text-[#383838] text-[20px] font-normal leading-[30px] md:flex lg:w-[581px] lg:h-[30px] lg:gap-[30px] gap-2 hidden">
           {navItems.map(({ path, link }) => (
             <li key={path}>
               <NavLink to={path}>{link}</NavLink>
@@ -42,7 +42,7 @@ const NavBar = (props) => {
         </ul>
 
         {/* menu items for large devices */}
-        <div className="lg:flex gap-5 items-center font-normal hidden justify-center w-[64px] h-[22px]">
+        <div className="lg:flex gap-1 lg:gap-5 items-center font-normal hidden justify-center lg:w-[64px] lg:h-[22px]">
           <div
             onClick={() => props.handleShow(true)}
             className="w-[22px] h-[22px] flex"

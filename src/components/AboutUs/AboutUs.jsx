@@ -13,11 +13,11 @@ const AboutUs = () => {
           stylish eyewear. That's why we've designed a collection of frames that
           prioritize both form and function. <br />
           <span className="lg:py-2 block font-normal leading-[20px] ">
-            Our team of experts is dedicated to helping you find the perfect{" "}
+            Our team of experts is dedicated to helping you find the perfect{" "} <br />
             pair of glasses.
           </span>
         </p>
-        <button className="text-white mb-8 font-bold gap-4 px-2 w-1/2 md:w-1/2  py-2  lg:rounded-md lg:px-3 lg:py-2  bg-[#383838] items-center justify-center rounded lg:w-1/4">
+        <button className="text-white mb-8 font-bold gap-4 px-2   py-2  lg:rounded-md lg:px-3 lg:py-2  bg-[#383838] items-center justify-center rounded lg:w-[158px] lg:h-[48px] w-1/2">
           About Us
         </button>
       </div>

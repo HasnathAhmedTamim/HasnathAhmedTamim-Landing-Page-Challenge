@@ -67,7 +67,7 @@ const Test = (props) => {
                         />
                       )}
                       <img
-                        className="lg:w-[343px] lg:h-[212px] w-1/2"
+                        className="lg:w-[343px] lg:h-[212px] w-1/2 "
                         src={image}
                         alt={product.name}
                       />
