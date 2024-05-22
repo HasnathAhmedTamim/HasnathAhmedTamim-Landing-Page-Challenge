@@ -4,13 +4,13 @@ import Banner from "../components/Banner/Banner";
 import BuyEasyStep from "../components/BuyEasyStep/BuyEasyStep";
 import DiscountProducts from "../components/DiscountProducts/DiscountProducts";
 import Products from "../components/Products/Products";
-import NavBar from "./../components/NavBar/NavBar";
-import CartList from "../components/CartList/CartList";
+
+// import CartList from "../components/CartList/CartList";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
-  const [showCart,setShowCart] = useState(false)
+  // const [showCart,setShowCart] = useState(false)
   // Function to add item to cart
 const addToCart = (data) => {
   // console.log(data); // Placeholder, replace with your actual logic to add item to cart
@@ -35,14 +35,12 @@ console.log(cart)
       });
   }, []);
 
-  const handleShow = (value)=>{
-    setShowCart(value)
-  }
+  // const handleShow = (value)=>{
+  //   setShowCart(value)
+  // }
   return (
     <div className="">
-      <div>
-        <NavBar count={cart.length} handleShow={handleShow} ></NavBar>
-      </div>
+     
 
       <div>
         <Banner></Banner>
@@ -59,8 +57,8 @@ console.log(cart)
         </div>
         <div className="container mx-auto">
           {
-            showCart ? 
-            <CartList cart={cart}></CartList> :
+            // showCart ? 
+            // <CartList cart={cart}></CartList> :
           <Products products={products} addToCart={addToCart} />
           }
         </div>

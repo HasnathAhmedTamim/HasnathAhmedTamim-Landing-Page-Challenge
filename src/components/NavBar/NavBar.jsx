@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { FaXmark } from "react-icons/fa6";
-import { Link, NavLink } from "react-router-dom";
-import CartList from "../CartList/CartList";
+import { NavLink } from "react-router-dom";
 
 const NavBar = (props) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -17,11 +16,10 @@ const NavBar = (props) => {
     { path: "/features", link: "Features" },
     { path: "/reviews", link: "Reviews" },
     { path: "/contactus", link: "Contact Us" },
-    
   ];
 
   return (
-    <header className="bg-white border font-primary">
+    <header className="bg-white border font-primary fixed top-0 left-0 w-full z-50">
       <nav
         onClick={() => props.handleShow(false)}
         className="px-[23px] py-[41px] container mx-auto flex justify-between items-center lg:w-[1600px] lg:h-[47px]"
@@ -49,12 +47,9 @@ const NavBar = (props) => {
           >
             <div className="">
               <div>
-                <Link to={CartList}>
-                  <img src="/src/assets/logo/Vector (1).png" alt="Cart" />
-                  <sup className="font-bold"> {props.count} </sup>
-                </Link>
+                <img src="/src/assets/logo/Vector (1).png" alt="Cart" />
+                <sup className="font-bold"> {props.count} </sup>
               </div>
-              
             </div>
           </div>
 
